@@ -2,6 +2,7 @@ import { PostBar } from "./components/PostBar/PostBar";
 import { PostCard } from "./components/PostCard/PostCard";
 import { ProfileCard } from "./components/ProfileCard/ProfileCard";
 import { Header } from "./components/Header/Header";
+import { JobUpdates } from "./components/JobUpdates/JobUpdates";
 
 export const App = () => {
   return (
@@ -10,7 +11,7 @@ export const App = () => {
 
     <Header />
     </div>
-    <div className="flex gap-2 xl:gap-10 mt-5  xl:px-72 m-1">
+    <div className="flex gap-2 lg:gap-1 xl:gap-10 mt-5 xl:mx-48 lg:mx-auto md:pt-14    m-1">
       <div className="hidden md:block">
         <ProfileCard/>
       </div>
@@ -21,6 +22,10 @@ export const App = () => {
         <div>
           <PostCard/>
         </div>
+      </div>
+
+      <div className="hidden lg:block">
+        <JobUpdates/>
       </div>
      
     </div>

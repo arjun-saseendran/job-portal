@@ -16,7 +16,7 @@ export const PostCard = () => {
   const [show, setShow] = useState(false);
   return (
     <div
-      className={`w-full md:w-[500px] ${
+      className={`w-full md:w-[500px]  ${
         show ? "h-[760px]" : "h-[735px] "
       } border  rounded-md shadow p-4`}
     >
@@ -80,7 +80,7 @@ export const PostCard = () => {
         </span>
         <a href="">Fathima Beevi T and 3 others</a>
       </div>
-      <div className="flex items-center justify-around flex-wrap p-2">
+      <div className="flex items-center justify-around p-2">
         <div className="flex items-center hover:bg-gray-100 gap-1 cursor-pointer p-2 rounded ">
           <FaRegThumbsUp />
           Like

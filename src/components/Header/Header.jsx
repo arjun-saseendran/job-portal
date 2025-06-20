@@ -21,7 +21,7 @@ export const Header = () => {
     <div
       className={`w-full ${
         open ? "mb-80" : "mb-0"
-      } md:flex items-center lg:justify-between px-2 py-1 md:py-0 xl:px-48 border h-12`}
+      } md:flex items-center lg:justify-between bg-white px-2 py-1 md:py-0 xl:px-48  h-12 md:fixed md:z-50 shadow md:top-0 md:left-0 `}
     >
       <div className="flex justify-between items-center w-full md:w-1/2">
         <div className="flex items-center h-full">
