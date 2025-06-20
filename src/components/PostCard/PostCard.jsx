@@ -72,7 +72,7 @@ export const PostCard = () => {
           alt=""
         />
       </div>
-      <div className="flex items-center gap-3 mt-2 p-2 border-b">
+      <div className="flex items-center gap-3 mt-2 p-2 text-xs md:text-base  border-b">
         <span className="flex items-center">
           <FaHeart className="text-red-500" />{" "}
           <FaThumbsUp className="text-blue-500" />{" "}
@@ -80,20 +80,20 @@ export const PostCard = () => {
         </span>
         <a href="">Fathima Beevi T and 3 others</a>
       </div>
-      <div className="flex items-center justify-around p-2">
-        <div className="flex items-center hover:bg-gray-100 gap-1 cursor-pointer p-2 rounded ">
-          <FaRegThumbsUp />
+      <div className="flex items-center justify-around  md:p-2">
+        <div className="flex items-center text-xs md:text-base hover:bg-gray-100 gap-1 cursor-pointer  p-2 rounded ">
+          <FaRegThumbsUp  />
           Like
         </div>
-        <div className="flex items-center hover:bg-gray-100 gap-1 cursor-pointer p-2 rounded">
+        <div className="flex items-center text-xs md:text-base hover:bg-gray-100 gap-1 cursor-pointer  p-2 rounded">
           <MdOutlineModeComment />
           Comment
         </div>
-        <div className="flex items-center hover:bg-gray-100 gap-1 p-2 cursor-pointer rounded">
+        <div className="flex items-center text-xs md:text-base hover:bg-gray-100 gap-1  p-2 cursor-pointer rounded">
           <MdRepeat />
           Repost
         </div>
-        <div className="flex items-center gap-1 hover:bg-gray-100 p-2 cursor-pointer rounded">
+        <div className="flex items-center gap-1 text-xs md:text-base hover:bg-gray-100  p-2 cursor-pointer rounded">
           <FaRegPaperPlane />
           Send
         </div>
