@@ -4,7 +4,7 @@ import { HiOutlineDocumentText } from 'react-icons/hi'
 
 export const PostBar = () => {
   return (
-    <div className='w-[500px] h-32 border rounded-lg p-2'>
+    <div className='md:w-[500px] h-32 border rounded-lg p-2'>
         <div className='flex items-center gap-2 px-4'>
             <img
           className="rounded-full w-14 h-14 "
@@ -16,7 +16,7 @@ export const PostBar = () => {
         </div>
         </div>
 
-        <div className='flex justify-around px-4 mt-4 '>
+        <div className='flex justify-around md:px-4 mt-4 '>
             <div className='flex items-center gap-2 cursor-pointer  hover:bg-gray-100 rounded-lg p-2'>
               <FaRegImage size={21} className='text-blue-500'/>  Media
             </div>
