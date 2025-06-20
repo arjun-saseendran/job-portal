@@ -4,6 +4,7 @@ import { ProfileCard } from "./components/ProfileCard/ProfileCard";
 import { Header } from "./components/Header/Header";
 import { JobUpdates } from "./components/JobUpdates/JobUpdates";
 import { Analytics } from "./components/Analytics/Analytics";
+import { Shortcuts } from "./components/Shortcuts/Shortcuts";
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
       <div className="hidden md:flex flex-col gap-2">
         <ProfileCard/>
         <Analytics/>
+        <Shortcuts/>
       </div>
       <div className="flex flex-col gap-4">
         <div>
