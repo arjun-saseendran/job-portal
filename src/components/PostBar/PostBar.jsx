@@ -7,9 +7,9 @@ export const PostBar = () => {
     <div className='md:w-[500px] h-32 border rounded-lg p-2'>
         <div className='flex items-center gap-2 px-4'>
             <img
-          className="rounded-full w-14 h-14 "
-          src="https://media.licdn.com/dms/image/v2/D5635AQEGAq4FamTp8g/profile-framedphoto-shrink_200_200/B56ZUzmS1pHQAc-/0/1740327431826?e=1750928400&v=beta&t=AcUJldCHp1U4n0kVJoT0jBlVGlH8DhbseNAlbpGC4t4"
-          alt="profile photo"
+          className="rounded-full w-12 h-12 "
+          src='https://media.licdn.com/dms/image/v2/D5635AQEGAq4FamTp8g/profile-framedphoto-shrink_200_200/B56ZUzmS1pHQAc-/0/1740327431826?e=1751612400&v=beta&t=Mc9uQOFKy36vf7VhTcXF8BOqTMaj0aUtChX8f92Vbhg'
+          alt='profile photo'
         />
         <div className='rounded-full border border-gray-400 p-2 w-full cursor-pointer hover:bg-gray-100'>
             <span className='ms-2'>Start Post</span>

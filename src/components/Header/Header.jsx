@@ -9,6 +9,7 @@ import {
   FaAngleDown,
 } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [home, setHome] = useState(false);
@@ -17,6 +18,7 @@ export const Header = () => {
   const [message, setMessage] = useState(false);
   const [notifications, setNotifications] = useState(false);
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <div
       className={`w-full ${
@@ -96,6 +98,7 @@ export const Header = () => {
               setMessage(false);
               setNetwork(false);
               setNotifications(false);
+              navigate('/jobs')
             }}
             className={`flex flex-col justify-center ${
               job ? "border-b-2 border-gray-600" : "border-none"

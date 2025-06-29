@@ -13,7 +13,7 @@ export const ProfileCard = () => {
         />
         <img
           className="rounded-full w-16 h-16 absolute top-8 left-4"
-          src="https://media.licdn.com/dms/image/v2/D5635AQEGAq4FamTp8g/profile-framedphoto-shrink_200_200/B56ZUzmS1pHQAc-/0/1740327431826?e=1750928400&v=beta&t=AcUJldCHp1U4n0kVJoT0jBlVGlH8DhbseNAlbpGC4t4"
+          src='https://media.licdn.com/dms/image/v2/D5635AQEGAq4FamTp8g/profile-framedphoto-shrink_200_200/B56ZUzmS1pHQAc-/0/1740327431826?e=1751612400&v=beta&t=Mc9uQOFKy36vf7VhTcXF8BOqTMaj0aUtChX8f92Vbhg'
           alt="profile photo"
         />
       </div>
