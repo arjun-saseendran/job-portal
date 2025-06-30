@@ -1,10 +1,10 @@
-import { PostBar } from "../../components/PostBar/PostBar";
-import { PostCard } from "../../components/PostCard/PostCard";
-import { ProfileCard } from "../../components/ProfileCard/ProfileCard";
-import { Header } from "../../components/Header/Header";
-import { JobUpdates } from "../../components/JobUpdates/JobUpdates";
-import { Analytics } from "../../components/Analytics/Analytics";
-import { Shortcuts } from "../../components/Shortcuts/Shortcuts";
+import { PostBar } from "../../components/postbar/PostBar";
+import { PostCard } from "../../components/postcard/PostCard";
+import { ProfileCard } from "../../components/profilecard/ProfileCard";
+import { Header } from "../../components/header/Header";
+import { JobUpdates } from "../../components/jobupdates/JobUpdates";
+import { Analytics } from "../../components/analytics/Analytics";
+import { Shortcuts } from "../../components/shortcuts/Shortcuts";
 
 export const Home = () => {
   return (
