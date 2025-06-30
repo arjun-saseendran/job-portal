@@ -5,20 +5,27 @@ import "./index.css";
 import { App } from "./App.jsx";
 import { Home } from "./pages/Home/Home.jsx";
 import { Jobs } from "./pages/jobs/Jobs.jsx";
+import {Root} from "./routes/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/jobs",
-    element: <Jobs />,
+    element: <Root />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "/jobs",
+        element: <Jobs />,
+      },
+    ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

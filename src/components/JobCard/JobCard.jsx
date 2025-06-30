@@ -8,7 +8,7 @@ export const JobCard = ({ jobs }) => {
     
     <div className="border w-[500px]  rounded-md p-5">
       {jobs?.map(job => (
-        <div className="border-b pb-4 p-5" key={job?.id}>
+        <div className="border pb-4 p-5 m-1" key={job?.id}>
           <div className="flex gap-2">
             <div className="flex items-center justify-center gap-1">
               <img className="w-14" src={job?.logo} alt="company logo" />

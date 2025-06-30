@@ -9,10 +9,10 @@ import {
   FaAngleDown,
 } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export const Header = () => {
-  const [home, setHome] = useState(false);
+  const [home, setHome] = useState(true);
   const [network, setNetwork] = useState(false);
   const [job, setJob] = useState(false);
   const [message, setMessage] = useState(false);
@@ -55,12 +55,10 @@ export const Header = () => {
           open ? "block" : "hidden"
         }`}
       >
-        <ul
-          className="flex flex-col gap-1 mt-4 md:mt-0 md:flex-row w-full   items-center md:gap-4 lg:gap-6"
-        >
+        <ul className="flex flex-col gap-1 mt-4 md:mt-0 md:flex-row w-full   items-center md:gap-4 lg:gap-6">
           <li
             onClick={() => {
-              setHome(!home);
+              setHome(true);
               setJob(false);
               setMessage(false);
               setNetwork(false);
@@ -68,16 +66,19 @@ export const Header = () => {
             }}
             className={`flex flex-col justify-center ${
               home ? "border-b-2 border-gray-600" : "border-none"
-            } text-xs text-gray-500 items-center cursor-pointer 
-            bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0 
+            } text-xs text-gray-500 items-center cursor-pointer
+            bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto hover:text-gray-600`}
           >
-            <FaHome size={20} />
-            Home
+            <Link className="flex flex-col items-center justify-center" to="/">
+              {" "}
+              <FaHome size={20} />
+              Home
+            </Link>
           </li>
           <li
             onClick={() => {
-              setNetwork(!network);
+              setNetwork(true);
               setJob(false);
               setMessage(false);
               setHome(false);
@@ -85,7 +86,7 @@ export const Header = () => {
             }}
             className={`flex flex-col justify-center ${
               network ? "border-b-2 border-gray-600" : "border-none"
-            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0 
+            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto`}
           >
             <FaUsers size={20} />
@@ -93,16 +94,16 @@ export const Header = () => {
           </li>
           <li
             onClick={() => {
-              setJob(!job);
+              setJob(true);
               setHome(false);
               setMessage(false);
               setNetwork(false);
               setNotifications(false);
-              navigate('/jobs')
+              navigate("/jobs");
             }}
             className={`flex flex-col justify-center ${
               job ? "border-b-2 border-gray-600" : "border-none"
-            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0 
+            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto`}
           >
             <FaBriefcase size={20} />
@@ -110,7 +111,7 @@ export const Header = () => {
           </li>
           <li
             onClick={() => {
-              setMessage(!message);
+              setMessage(true);
               setJob(false);
               setHome(false);
               setNetwork(false);
@@ -118,7 +119,7 @@ export const Header = () => {
             }}
             className={`flex flex-col justify-center ${
               message ? "border-b-2 border-gray-600" : "border-none"
-            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0 
+            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto`}
           >
             <FaCommentDots size={20} />
@@ -126,7 +127,7 @@ export const Header = () => {
           </li>
           <li
             onClick={() => {
-              setNotifications(!notifications);
+              setNotifications(true);
               setHome(false);
               setJob(false);
               setMessage(false);
@@ -134,17 +135,19 @@ export const Header = () => {
             }}
             className={`flex flex-col justify-center ${
               notifications ? "border-b-2 border-gray-600" : "border-none"
-            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0 
+            } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto`}
           >
             <FaBell size={20} />
             Notifications
           </li>
-          <li className="flex flex-col justify-center items-center bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0 
-            w-full md:w-auto">
+          <li
+            className="flex flex-col justify-center items-center bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
+            w-full md:w-auto"
+          >
             <img
               className="rounded-full w-6 h-6 "
-              src="https://media.licdn.com/dms/image/v2/D5635AQEGAq4FamTp8g/profile-framedphoto-shrink_200_200/B56ZUzmS1pHQAc-/0/1740327431826?e=1750928400&v=beta&t=AcUJldCHp1U4n0kVJoT0jBlVGlH8DhbseNAlbpGC4t4"
+              src="https://media.licdn.com/dms/image/v2/D5635AQEGAq4FamTp8g/profile-framedphoto-shrink_200_200/B56ZUzmS1pHQAc-/0/1740327431826?e=1751612400&v=beta&t=Mc9uQOFKy36vf7VhTcXF8BOqTMaj0aUtChX8f92Vbhg"
               alt="profile photo"
             />
             <span className="flex items-center text-xs text-gray-500">
