@@ -6,6 +6,8 @@ import { App } from "./App.jsx";
 import { Home } from "./pages/Home/Home.jsx";
 import { Jobs } from "./pages/jobs/Jobs.jsx";
 import {Root} from "./routes/Root";
+import { Notifications } from "./pages/notifications/Notifications.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/jobs",
         element: <Jobs />,
+      },
+      {
+        path: "/notifications",
+        element: <Notifications/>,
       },
     ],
   },

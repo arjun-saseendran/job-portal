@@ -138,8 +138,10 @@ export const Header = () => {
             } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto`}
           >
+            <Link className="flex flex-col items-center justify-center" to="/notifications">
             <FaBell size={20} />
             Notifications
+            </Link>
           </li>
           <li
             className="flex flex-col justify-center items-center bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0

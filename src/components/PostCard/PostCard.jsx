@@ -11,6 +11,7 @@ import { FaHandsClapping } from "react-icons/fa6";
 import { MdOutlineModeComment, MdRepeat } from "react-icons/md";
 import { BsDot } from "react-icons/bs";
 import { useState } from "react";
+import dp from '../../assets/dp0.jpeg'
 
 export const PostCard = () => {
   const [show, setShow] = useState(false);
@@ -26,7 +27,7 @@ export const PostCard = () => {
             <img
               className="rounded-full "
               width={50}
-              src="https://media.licdn.com/dms/image/v2/D5635AQE5M9wYGBPmcQ/profile-framedphoto-shrink_100_100/B56Zar.1_RGkAs-/0/1746642100718?e=1750820400&v=beta&t=69k37c_ecTmt3OAq_574uqMCm-CJvOJbO7-1LQ5tHFs"
+              src={dp}
               alt="profile photo"
             />
           </div>
