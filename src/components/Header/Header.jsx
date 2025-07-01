@@ -7,9 +7,12 @@ import {
   FaCommentDots,
   FaBell,
   FaAngleDown,
+  FaTimes,
 } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import { saveSearchQuery, clearSearchQuery } from "../../redux/features/searchSlice";
 
 export const Header = () => {
   const [home, setHome] = useState(true);
@@ -19,6 +22,8 @@ export const Header = () => {
   const [notifications, setNotifications] = useState(false);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const searchQuery = useSelector((state)=> state?.search)
   return (
     <div
       className={`w-full ${
@@ -39,11 +44,14 @@ export const Header = () => {
               placeholder="Search"
               className="border-2 py-1.5 h-9 w-full pl-8 pr-2 placeholder:text-xs  border-gray-100 rounded-full ml-2 "
               type="text"
+              value={searchQuery}
+              onChange={(e) => dispatch(saveSearchQuery(e.target.value))}
             />
             <FaSearch
               size={13}
               className="absolute  top-1/2 left-5 -translate-y-1/2"
             />
+          {searchQuery && <FaTimes onClick={()=> dispatch(clearSearchQuery())} className="absolute top-1/2 left-52 md:left-64 -translate-y-1/2 cursor-pointer hover:text-gray-500 " size={13}/>}
           </div>
         </div>
         <div className="md:hidden">
@@ -138,9 +146,12 @@ export const Header = () => {
             } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto`}
           >
-            <Link className="flex flex-col items-center justify-center" to="/notifications">
-            <FaBell size={20} />
-            Notifications
+            <Link
+              className="flex flex-col items-center justify-center"
+              to="/notifications"
+            >
+              <FaBell size={20} />
+              Notifications
             </Link>
           </li>
           <li

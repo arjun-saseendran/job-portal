@@ -5,8 +5,9 @@ export const searchSlice = createSlice({
   initialState: "",
   reducers: {
     saveSearchQuery: (_, action) => action.payload,
+    clearSearchQuery: () => "",
   },
 });
 
-export const { saveSearchQuery } = searchSlice.actions;
+export const { saveSearchQuery, clearSearchQuery } = searchSlice.actions;
 export default searchSlice.reducer;

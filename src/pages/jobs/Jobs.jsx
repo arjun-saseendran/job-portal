@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Analytics } from "../../components/analytics/Analytics";
 import { JobCard } from "../../components/jobcard/JobCard";
 import { JobUpdates } from "../../components/jobupdates/JobUpdates";
@@ -6,6 +7,8 @@ import { Shortcuts } from "../../components/shortcuts/Shortcuts";
 import { jobList } from "../../data/jobs";
 
 export const Jobs = () => {
+  const query = useSelector((state)=> state?.search);
+   const data  = query ? jobList.filter((job)=> job.title.toLocaleLowerCase().includes(query.toLocaleLowerCase())) : jobList
   return (
     <>
      <div className="w-full">
@@ -20,7 +23,7 @@ export const Jobs = () => {
             <div className="flex flex-col gap-4">
               
               <div>
-               <JobCard jobs={jobList} />
+               <JobCard jobs={data} />
               </div>
             </div>
     

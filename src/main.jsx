@@ -5,9 +5,9 @@ import "./index.css";
 import { store } from "./redux/store.js";
 import { Home } from "./pages/Home/Home.jsx";
 import { Jobs } from "./pages/jobs/Jobs.jsx";
-import {Root} from "./routes/Root";
+import { Root } from "./routes/Root";
 import { Notifications } from "./pages/notifications/Notifications.jsx";
-
+import { Provider } from "react-redux";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/notifications",
-        element: <Notifications/>,
+        element: <Notifications />,
       },
     ],
   },
@@ -32,6 +32,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} store={store} />
-  </StrictMode>,
+    <Provider store={store}>
+    <RouterProvider router={router}  />
+    </Provider>
+  </StrictMode>
 );
