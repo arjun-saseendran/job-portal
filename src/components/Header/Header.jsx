@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   FaSearch,
   FaHome,
-  FaUsers,
   FaBriefcase,
   FaCommentDots,
   FaBell,
@@ -12,7 +11,11 @@ import {
 import { IoMenu } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
-import { saveSearchQuery, clearSearchQuery } from "../../redux/features/searchSlice";
+import {
+  saveSearchQuery,
+  clearSearchQuery,
+} from "../../redux/features/searchSlice";
+import { MdPostAdd } from "react-icons/md";
 
 export const Header = () => {
   const [home, setHome] = useState(true);
@@ -23,7 +26,7 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const searchQuery = useSelector((state)=> state?.search)
+  const searchQuery = useSelector((state) => state?.search);
   return (
     <div
       className={`w-full ${
@@ -51,7 +54,13 @@ export const Header = () => {
               size={13}
               className="absolute  top-1/2 left-5 -translate-y-1/2"
             />
-          {searchQuery && <FaTimes onClick={()=> dispatch(clearSearchQuery())} className="absolute top-1/2 left-52 md:left-64 -translate-y-1/2 cursor-pointer hover:text-gray-500 " size={13}/>}
+            {searchQuery && (
+              <FaTimes
+                onClick={() => dispatch(clearSearchQuery())}
+                className="absolute top-1/2 left-52 md:left-64 -translate-y-1/2 cursor-pointer hover:text-gray-500 "
+                size={13}
+              />
+            )}
           </div>
         </div>
         <div className="md:hidden">
@@ -97,8 +106,14 @@ export const Header = () => {
             } text-xs text-gray-500 items-center cursor-pointer hover:text-gray-600 bg-gray-100 md:bg-white rounded md:rounded-none p-1 md:p-0
             w-full md:w-auto`}
           >
-            <FaUsers size={20} />
-            My Network
+            <Link
+              className="flex flex-col items-center justify-center"
+              to="/post/job"
+            >
+              {" "}
+              <MdPostAdd size={20} />
+              Post Job
+            </Link>
           </li>
           <li
             onClick={() => {
