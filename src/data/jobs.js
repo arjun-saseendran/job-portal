@@ -98,5 +98,5 @@ export const jobList = [
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/512px-IBM_logo.svg.png",
     postedAgo: "3 days ago",
     easyApply: false,
-  }
+  },
 ];

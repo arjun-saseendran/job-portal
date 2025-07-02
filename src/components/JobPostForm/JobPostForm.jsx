@@ -141,7 +141,7 @@ export const JobPostForm = () => {
               location: "",
               type: "on site",
               logo: "",
-              easyApply: false
+              easyApply: false,
             });
           }}
           className="bg-blue-500 text-white w-1/2 mx-auto py-2 rounded hover:bg-opacity-90"
